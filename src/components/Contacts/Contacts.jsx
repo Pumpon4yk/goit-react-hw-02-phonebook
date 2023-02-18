@@ -1,4 +1,5 @@
-const { Container,Label, Input, List, Item, PhoneNumber, ButtonDelete  } = require("./Contacts.styled")
+import { Container,Label, Input, List, Item, PhoneNumber, ButtonDelete  } from "./Contacts.styled"
+import PropTypes from 'prop-types';
 
 
 
@@ -21,6 +22,17 @@ const Contacts = ({contacts,  remove, filter, onChange}) => {
 
         </Container>
     )
+}
+Contacts.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired
+        }).isRequired
+    ).isRequired,
+    remove: PropTypes.func.isRequired,
+    filter: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
 }
 
 export default Contacts

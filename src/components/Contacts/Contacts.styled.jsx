@@ -24,7 +24,6 @@ padding: 0;
 
 export const Item = styled.li`
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 
@@ -32,7 +31,6 @@ export const Item = styled.li`
 
 export const PhoneNumber = styled.span`
 margin-left: 5px;
-margin-right: auto;
 `;
 
 export const ButtonDelete = styled.button`
@@ -41,6 +39,7 @@ color: #000;
 border-radius: 10px;
 padding: 1px 4px;
 font-size: 12px;
+margin-left: 20px;
 
 :hover{
     background-color: #ff3333fd;
